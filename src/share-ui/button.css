@@ -1,0 +1,36 @@
+.button {
+  color: white;
+  background-color: #2563eb; /* 稍微深一點的藍色比較專業 */
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: 600;
+
+  /* 關鍵：過度動畫設定 */
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  outline: none;
+}
+
+/* 滑鼠懸停效果 */
+.button:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px); /* 輕微浮起 */
+}
+
+/* 按下去的動畫效果 */
+.button:active {
+  transform: scale(0.95); /* 縮小 5%，產生被按壓的感覺 */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05); /* 陰影縮回 */
+  background-color: #1e40af; /* 顏色變更深 */
+}
+
+/* 焦點輪廓 (提升無障礙體驗) */
+.button:focus-visible {
+  ring: 2px solid #60a5fa;
+  outline: 2px solid transparent;
+}
